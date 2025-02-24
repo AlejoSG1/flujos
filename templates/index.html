@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generador de Flujo de Caja</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>Generador de Flujo de Caja</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Absorción (unidades por mes):</label>
+                                <input type="number" name="absorcion" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">% Reserva:</label>
+                                <input type="number" step="0.01" name="porcentaje_reserva" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">% Desembolso:</label>
+                                <input type="number" step="0.01" name="porcentaje_desembolso" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Meses Reserva:</label>
+                                <input type="number" name="meses_reserva" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Meses "Lag" Desembolso:</label>
+                                <input type="number" name="meses_lag_desembolso" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Subir Archivo de Inventario (.xlsx):</label>
+                                <input type="file" name="file" class="form-control" required>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Generar Flujo de Caja</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
